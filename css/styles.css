@@ -1,0 +1,401 @@
+/* Базові стилі */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f4f4f4, #e2e2e2);
+}
+
+h1 { text-align: center; }
+h3 { text-align: left; }
+
+blockquote {
+    font-family: "Calisto MT";
+    font-style: italic;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Контейнери */
+
+header, main, footer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+footer { text-align: center; }
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Навігація */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0 auto 20px;
+    max-width: 800px;
+}
+
+/* Зображення та галерея */
+figure {
+    float: left;
+    width: 40%;
+    margin: 0 20px 10px 0;
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.gallery-item {
+    width: 45%;
+    margin: 0;
+}
+
+section {
+    clear: both;
+    margin-bottom: 40px;
+}
+
+main h2 { text-align: center; }
+
+/* Таблиця */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+thead {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Форми */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.inline-label {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52,152,219,0.5);
+    outline: none;
+}
+
+input:valid { border-color: #28a745; }
+input:invalid { border-color: #dc3545; }
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover { background-color: #218838; }
+button:active {
+    background-color: #1e7e34;
+    transform: translateY(1px);
+}
+
+button[type="reset"] { background-color: #6c757d; }
+button[type="reset"]:hover { background-color: #5a6268; }
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.form-grid, .feedback-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.feedback-grid { grid-template-columns: 1fr; }
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.form-buttons button {
+    width: auto;
+    padding: 12px 20px;
+}
+
+.avatar-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .form-grid, .feedback-grid { grid-template-columns: 1fr; }
+}
+
+/* Спеціальні класи */
+.fun-fact {
+    float: right;
+    width: 200px;
+    margin-left: 20px;
+    padding: 15px;
+    background-color: #eef7ff;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+}
+
+.fun-fact h4 { margin-top: 0; }
+
+.blue-period {
+    color: blue;
+    font-weight: bold;
+}
+
+.pink-period {
+    color: deeppink;
+    font-weight: bold;
+}
+
+/* Стилі для contact.html */
+.info-block {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.float-left {
+    float: left;
+    margin-right: 15px;
+    width: 150px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 15px;
+    width: 150px;
+}
+
+.info-block-no-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    clear: both;
+}
+
+.info-block-no-wrap .image-container {
+    flex-shrink: 0;
+    width: 150px;
+}
+
+.info-block-no-wrap h2 {
+    margin-top: 0;
+    text-align: left;
+}
+
+/* Картки */
+.cards-section {
+    position: relative;
+    height: 250px;
+    margin: 40px 0;
+}
+
+.card {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-1 {
+    background-color: #e3f2fd;
+    top: 0;
+    left: 30%;
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+
+.card-2 {
+    background-color: #e8f5e9;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(5deg);
+    z-index: 2;
+}
+
+.card-3 {
+    background-color: #fff3e0;
+    top: 0;
+    right: 30%;
+    transform: rotate(10deg);
+    z-index: 1;
+}
+
+/* Футер соцмереж */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #acacac;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.social-icon:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+}
+
+
